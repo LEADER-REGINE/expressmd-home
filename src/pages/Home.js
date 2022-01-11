@@ -34,7 +34,7 @@ export default function Home() {
                             id placerat nunc metus ac est.
                         </Typography>
 
-                        <Button className="AppButton" variant="contained">Launch the App</Button>
+                        <Button className="AppButton" variant="contained" onClick={() => window.location = "https://app.expressmd.ga"}>Launch the App</Button>
                     </Box>
                     <img src={Home1} className="homeImg1 slide-left" />
                 </Box>

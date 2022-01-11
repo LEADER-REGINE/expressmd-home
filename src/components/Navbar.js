@@ -94,19 +94,15 @@ export default function Navbar() {
                     </Box>
 
                     <Box sx={{ flexGrow: 0 }}>
-                        <Link
-                            to="https://app.expressmd.ga"
+                        <Button
                             className="appLink"
+                            variant="contained"
+                            color="primary"
+                            sx={{ textDecoration: "none" }}
+                            onClick={() => window.location = "https://app.expressmd.ga"}
                         >
-                            <Button
-                                variant="contained"
-                                color="primary"
-                                sx={{ textDecoration: "none" }}
-                                onClick={() => window.location = "https://app.expressmd.ga"}
-                            >
-                                Launch the App
-                            </Button>
-                        </Link>
+                            Launch the App
+                        </Button>
                     </Box>
                 </Toolbar>
             </Container>
