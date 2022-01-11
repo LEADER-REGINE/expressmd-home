@@ -102,6 +102,7 @@ export default function Navbar() {
                                 variant="contained"
                                 color="primary"
                                 sx={{ textDecoration: "none" }}
+                                onClick={() => window.location = "app.expressmd.ga"}
                             >
                                 Launch the App
                             </Button>
