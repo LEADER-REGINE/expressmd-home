@@ -1,4 +1,4 @@
-import { Box, Typography, Button, Paper, Divider } from '@mui/material'
+import { Box, Typography, Button, Paper, Divider, Stack, Badge } from '@mui/material'
 import React from 'react'
 import Home1 from '../assets/home1.jpg'
 import Child from '../assets/child.png'
@@ -7,11 +7,22 @@ import JayRon from '../assets/jayron.jpg'
 import Regine from '../assets/regine.jpg'
 import Prago from '../assets/prago.jpg'
 import Jym from '../assets/jym.jpg'
+import AboutLogo from '../assets/icon-192x192.png'
 import Marc from '../assets/marc.jpg'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer';
 import '../App.css';
 import { Helmet } from 'react-helmet';
+import { styled } from '@mui/material/styles';
+import SearchIcon from '@mui/icons-material/Search';
+
+const Item = styled(Paper)(({ theme }) => ({
+    ...theme.typography.body2,
+    padding: theme.spacing(1),
+    textAlign: 'center',
+    color: 'GrayText',
+}));
+
 
 export default function Home() {
     return (
@@ -28,10 +39,7 @@ export default function Home() {
                             HOME CARE FOR YOUR FAMILY
                         </h1>
                         <Typography className="homeText1">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Integer finibus placerat mauris ac dignissim.
-                            Nunc at ultrices ipsum. Nunc viverra, lacus a pellentesque posuere, ex ex tempor mauris,
-                            id placerat nunc metus ac est.
+                            ExpressMD will help you search for the nearest doctor that you need and get treated at home without the fear of contracting the COVID-19 virus outside.
                         </Typography>
 
                         <Button className="AppButton" variant="contained" onClick={() => window.location = "https://app.expressmd.ga"}>Launch the App</Button>
@@ -41,7 +49,7 @@ export default function Home() {
             </Box>
             <Box className="typesList">
                 <Box className="typesContainer">
-                    <Typography className="header" color="secondary" variant="h3">Our Services</Typography>
+                    <Typography className="header" variant="h3">Medical Services</Typography>
                 </Box>
                 <Box className="typeBox">
                     <Paper className="typePaper" elevation="8">
@@ -61,19 +69,34 @@ export default function Home() {
                     <Typography className="header" variant="h3">About Us</Typography>
                 </Box>
                 <Box className="aboutUsTextContainer">
-                    <Typography className="aboutUsText">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Nunc accumsan magna porta dictum lobortis.
-                        Suspendisse potenti. Praesent tempus,
-                        velit nec congue sagittis, nisl nunc blandit metus,
-                        non bibendum neque augue sed nisi. Sed convallis interdum tempor.
-                        Praesent lectus orci, scelerisque sit amet tempor vitae,
-                        condimentum in neque. Nullam sed eros rhoncus mi eleifend dapibus
-                        non nec risus. Curabitur sit amet odio quis nisl pellentesque
-                        congue. Morbi sollicitudin dolor ante, vitae posuere augue
-                        posuere a. Quisque mattis ligula ac orci volutpat maximus.
+                    <Typography className="aboutUsText" paragraph="true">
+                        ExpressMD aims to provide users with the ability to find doctors without having to go outside. This is useful for the children, elderly, and pregnant women who need medical care without having to go to a clinic or hospital.
                     </Typography>
-                    <Typography variant="h3" className="aboutUsLogo">LOGO</Typography>
+                    <Typography className="aboutUsText" paragraph="true">
+                        Request an appointment now and receive the medical services that we offer. We assure you that the doctors in ExpressMD are all professional and passed our screening before hiring them.
+                    </Typography>
+                    <img src={AboutLogo} alt="logo" />
+                </Box>
+            </Box>
+            <Box className="howitworksBox">
+                <Box className="howitworksContainer">
+                    <Typography className="header" variant="h3">How It Works</Typography>
+                </Box>
+                <Box className="howitworksTextContainer">
+                    <Stack
+                        direction="row"
+                        divider={<Divider orientation="vertical" flexItem />}
+                        spacing={2}
+                    >
+                        <Item>
+                            <Badge badgeContent={1} color="primary" />
+                            <SearchIcon fontSize="large" />
+
+                            <Typography variant="h6">Browse Doctors</Typography>
+                        </Item>
+                        <Item>Item 2</Item>
+                        <Item>Item 3</Item>
+                    </Stack>
                 </Box>
             </Box>
             <Box className="ourTeamBox">

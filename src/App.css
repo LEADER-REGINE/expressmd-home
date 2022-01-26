@@ -43,7 +43,7 @@
 }
 
 .typesList {
-  background-color: #167694;
+  background-color: #049ce4;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -92,8 +92,34 @@
 .aboutUsTextContainer {
   margin-top: 25px;
   margin-bottom: 25px;
-  padding-left: 325px;
-  padding-right: 325px;
+  padding-left: 425px;
+  padding-right: 425px;
+}
+
+.aboutUsText {
+  font-size: x-large !important;
+}
+
+.howitworksBox {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: #13a7e4;
+}
+
+.howitworksContainer {
+  margin-top: 25px;
+}
+
+.howitworksTextContainer {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  padding-left: 425px;
+  padding-right: 425px;
+}
+
+.howitworksText {
+  font-size: larger !important;
 }
 
 .aboutUsLogo {
@@ -101,7 +127,7 @@
 }
 
 .ourTeamBox {
-  background-color: #16C2D5;
+  background-color: #4fbcec;
   display: flex;
   flex-direction: column;
   text-align: center;
